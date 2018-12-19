@@ -1,11 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-url ='https://www.naver.com' 
+url ='https://www.naver.com/' 
 
-response = requests.get(url).text
-soup = BeautifulSoup(response, 'html.parser')
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
 
-data_set = soup.select('.ah_k')
-data = data_set
-
+keyword = soup.select('.ah_k')
+print(keyword)
