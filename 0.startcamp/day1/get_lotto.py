@@ -1,8 +1,8 @@
 import requests 
 
-url = 'https://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=837'
+url = 'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=837'
 
-response = requests.get(url, verify=False)
+response = requests.get(url)
 lotto_data = response.json()
 
 real_numbers = [
