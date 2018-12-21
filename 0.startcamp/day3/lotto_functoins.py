@@ -14,8 +14,9 @@ import requests
 # result = amilucky(my_numbers, real_numbers)
 
 def pick_lotto():
-    my_numbers = random.sample(range(1, 46), 6)
-my_numbers = pick_lotto()
+    return random.sample(range(1, 46), 6)
+
+# my_numbers = pick_lotto()
 #     # 한줄코드 numbers = random.sample(range(1, 46), 6)
 #     return numbers
 #     # 함수는 return 이 있거나 없거나로 나뉜다 -> return이 없다고 해서 동작하지 않는 것이 아니다! ex)sorted()와 .sort()의 차이
@@ -23,6 +24,7 @@ my_numbers = pick_lotto()
 
 # my_numbers = pick_lotto()
 # print(my_numbers)
+
 
 def get_lotto(draw_no):
     url = 'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=' + str(draw_no)
@@ -37,10 +39,12 @@ def get_lotto(draw_no):
         'numbers' : numbers,
         'bonus' : bonus_number,
     }
+
     return final_dict
 
-get_numbers = get_lotto(98) #args == arguments 함수의 인자
-print(get_numbers)
+
+# get_numbers = get_lotto(98) #args == arguments 함수의 인자
+# print(get_numbers)
 
 # 인자가 있고 리턴이 있다
 # 인자가 있고 리턴이 없다
@@ -52,26 +56,43 @@ print(get_numbers)
     # differ_numbs = draw - pick
 
 def amilucky(pick, draw):
-    match_numbs = len(set(my_numbers) & (set(get_numbers['numbers']))
+    match_numbs = len(set(pick) & set(draw['numbers']))
     if match_numbs == 6:
-        return("1등")
+        return(1)
     elif match_numbs == 5 and get_numbers['bonus'] in pick:
-        return("2등")
+        return(2)
     elif match_numbs == 5:
-        return("3등")
+        return(3)
     elif match_numbs == 4:
-        return("4등")
+        return(4)
     elif match_numbs == 3:
-        return("5등")
+        return(5)
     else:
-        return("꽝")
-result = amilucky(my_numbers, get_numbers)
-print(result)
+        return(6)
+
+print(amilucky(pick_lotto(),get_lotto(810)))
+
+# def amilucky(pick, draw):
+#     match_numbs = len(set(my_numbers) & (set(get_numbers['numbers']))
+#     if match_numbs == 6:
+#         return("1등")
+#     elif match_numbs == 5 and get_numbers['bonus'] in pick:
+#         return("2등")
+#     elif match_numbs == 5:
+#         return("3등")
+#     elif match_numbs == 4:
+#         return("4등")
+#     elif match_numbs == 3:
+#         return("5등")
+#     else:
+#         return("꽝")
+# result = amilucky(my_numbers, get_numbers)
+# print(result)
 
 
-#두 리스트 값 비교, return 하기
-list_1 = [1, 2, 3, 4, 5, 6]
-list_2 = [1, 2, 3, 4, 5, 7]
+# #두 리스트 값 비교, return 하기
+# list_1 = [1, 2, 3, 4, 5, 6]
+# list_2 = [1, 2, 3, 4, 5, 7]
                                              
 
 
