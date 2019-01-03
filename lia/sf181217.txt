@@ -1,0 +1,83 @@
+>>SF 181217
+
+파이썬 챗봇 : s2.py.hphk.io
+
+API: 서비스들간의 대화 방식 / 보내는 사람 -> 받는 사람 
+
+컴퓨터가 잘 하는 것
+1.저장
+-오른쪽에 있는 것을 왼쪽에 저장 Ex) a = b : b를  a에 저장
+
+2.조건
+if/else
+
+3.반복
+while
+for i in ____
+
+변수 = 박스
+1)변수에 하나의 값을 지정
+
+2)변수에 여러 값을 지정 
+-> 리스트 사용 [ ] :박스가 여러 개 붙어 있다 / [ ]로 묶는다 / 쉼표로 구분한다 / 시작은 0부터 / 순서가 있다
+-> 딕셔너리 사용 { } : 박스에 이름을 붙인다 / { }로 묶는다 / "key" : value 형식 / "이름" : 값 / 부를때는 [ ]로, key로 부르면 value가 나온다 /   
+
+3)참/거짓 값은 조건/반복에 쓰인다!
+-> if / elif / else
+-> while : while에 해당하는 조건일 동안 계속 반복
+-> for i in [ ] : list안을 순서대로 한 번 반복
+
+API : 다른 시스템 간의 커뮤니케이션 방식
+
+
+	MOOC 사이트 모음
+	https://www.edx.org/
+	https://www.coursera.org/
+	https://www.udacity.com/
+	-> 기반 지식이 어느정도 쌓이면 원하는 분야의 기술 스택 강의로 습득 가능!_!
+
+	하버드 인기강의 : cs50
+
+4) Thing( ) -> ( )있으면 Thing은 함수(input/ output) 
+내장함수 / 외장함수
+
+내장함수: 함수이름 바로 치면 동작
+외장함수: import 함수
+
+
+* random.choice( 리스트 ) : 구하고자 하는 리스트 중 하나를 랜덤하게 추출
+* random.sample( 리스트,  n ) : 구하고자 하는 리스트 중  n개를 랜덤하게 추출
+* sorted(리스트) or .sort() : 리스트가 정렬되어 추출 
+  
+	www.chocolatey.org
+	-> cmd 관리자 권한으로 실행 -> install code  붙여넣기
+
+*requests.get( '주소' ) : 접근하고자 했던 주소에서 요청한 정보를 추출
+*requests.get( 주소박스. text) : 텍스트로 추출
+
+
+200, 404, 503 : Status code
+200: OK
+
+5)웹 스크래핑(크롤링) -> 코스피 코드짜기
+	-id 로 잡기 ( 한 문서에 한 개) : #~~~~
+	-value 로 잡기 : .~~~~~
+
+*select_one( selector ) :  문서 안에 있는 특정 내용을 (맨 위) 하나만 뽑기
+*select( selector ) : 문서 안에 있는 특정 내용을 뽑기
+
+6)API Vs Crawling
+ 프로그래밍 하라고 준 데이터 쓰기 Vs 사람 보라고 준 데이터 긁기 
+
+7)API Vs Package
+프로그래밍 하라고 준 데이터 쓰기 Vs 제-발 쓰라고 주는 코드(함수) 덩어리
+
+
+	설치 프로그램
+	choco install python --version 3.6.7
+	choco install typora -y
+	choco install git -y
+	choco install vscode -y
+
+
+
